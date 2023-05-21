@@ -1,5 +1,8 @@
 # AlgorithmsProject: CarpetWeavingFactory
 Algorithms Project
-Professor: Dr. Adibi
+
+Professor: Dr. Peyman Adibi
+
 University of Isfahan 1401_2
+
 Computer Engineering
