@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Carpet {
@@ -26,5 +27,9 @@ public class Carpet {
             if (v.value == value) return v;
         }
         return new Vertice(value);
+    }
+
+    public LinkedList<Vertice>[] getGraph() {
+        return graph;
     }
 }
