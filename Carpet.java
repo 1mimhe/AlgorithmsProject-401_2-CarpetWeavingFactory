@@ -1,18 +1,30 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Carpet {
-    private int n;
-    private LinkedList<Integer> g[];
+    private int numOfVertices;  //Number of Vertices
+    private LinkedList<Vertice> graph[];    //Graph
+    private ArrayList<Vertice> listOfVertices;
 
     public Carpet(int n) {
-        this.n = n;
-        g = new LinkedList[n];
+        this.numOfVertices = n;
+        graph = new LinkedList[n];
         for (int i = 0; i < n; ++i)
-            g[i] = new LinkedList();
+            graph[i] = new LinkedList();
+        listOfVertices = new ArrayList<>();
     }
 
-    void addEdge(int v1, int v2) {
-        g[v1].add(v2);
-        g[v2].add(v1);
+    public void addEdge(int value1, int value2) {
+        Vertice v1 = returnVertice(value1);
+        Vertice v2 = returnVertice(value2);
+        graph[v1.value].add(v2);
+        graph[v2.value].add(v1);
+    }
+
+    private Vertice returnVertice(int value) {
+        for (Vertice v : listOfVertices) {
+            if (v.value == value) return v;
+        }
+        return new Vertice(value);
     }
 }
