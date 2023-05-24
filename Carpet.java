@@ -5,6 +5,7 @@ import java.util.LinkedList;
 public class Carpet {
     private int numOfVertices;  //Number of Vertices
     private LinkedList<Vertice> graph[];    //Graph
+
     private ArrayList<Vertice> listOfVertices;
 
     public Carpet(int n) {
@@ -26,10 +27,16 @@ public class Carpet {
         for (Vertice v : listOfVertices) {
             if (v.value == value) return v;
         }
-        return new Vertice(value);
+        Vertice newVertice = new Vertice(value);
+        listOfVertices.add(newVertice);
+        return newVertice;
     }
 
     public LinkedList<Vertice>[] getGraph() {
         return graph;
+    }
+
+    public ArrayList<Vertice> getListOfVertices() {
+        return listOfVertices;
     }
 }
