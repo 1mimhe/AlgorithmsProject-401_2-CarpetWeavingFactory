@@ -1,11 +1,8 @@
 import java.util.Arrays;
 
 public class Graph {
-    public static void designNewCarpet(int n) {
-        Carpet newCarpet = new Carpet(n);
-
+    public static void designNewCarpet(Carpet newCarpet, int n) {
         int[] result = new int[n];
-        Arrays.fill(result, -1);
 
         result[0]  = 0;
 
@@ -33,9 +30,14 @@ public class Graph {
             Arrays.fill(availableForPaint, true);
         }
 
+        for (int i = 0; i < result.length; i++) {
+            newCarpet.getListOfVertices().get(i).color = result[i];
+        }
+
         System.out.println("Your New Designed Carpet:");
         for (int i = 0; i < n; i++)
             System.out.println("Pattern " + i + " --->  Color "
                     + result[i]);
+        Main.carpets.add(newCarpet);
     }
 }
