@@ -46,16 +46,16 @@ public class Graph {
     static int buyCarpet(int W, int[] weight, int[] value , int n) {
 
 
-        if (value.length == 0 || W == 0)
+        if (n == 0 || W == 0)
             return 0;
 
 
-        if (weight[value.length - 1] > W)
-            return buyCarpet(W, weight, value, value.length - 1);
+        if (weight[n - 1] > W)
+            return buyCarpet(W, weight, value, n - 1);
 
 
-        else return max(value[value.length - 1] + buyCarpet(W - weight[value.length - 1], weight, value, value.length - 1),
-                buyCarpet(W, weight, value, value.length - 1)
+        else return max(value[n - 1] + buyCarpet(W - weight[n - 1], weight, value, n - 1),
+                buyCarpet(W, weight, value, n - 1)
         );
     }
 }
