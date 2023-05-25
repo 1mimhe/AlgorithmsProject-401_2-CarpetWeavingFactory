@@ -1,5 +1,7 @@
 import java.util.Arrays;
 
+import static java.lang.Math.max;
+
 public class Graph {
     public static void designNewCarpet(Carpet newCarpet, int n) {
         int[] result = new int[n];
