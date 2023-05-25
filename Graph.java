@@ -40,55 +40,20 @@ public class Graph {
                     + result[i]);
         Main.carpets.add(newCarpet);
     }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    static int buyCarpet(int W, int[] weight, int[] value , int n) {
 
-    public static void shortestPath(int[][] graph, int source) {
-        int[] distance = new int[graph.length];
 
-        Boolean[] sptSet = new Boolean[graph.length];
+        if (n == 0 || W == 0)
+            return 0;
 
-        for (int i = 0; i < graph.length; i++) {
-            distance[i] = Integer.MAX_VALUE; // Infinite
-            sptSet[i] = false;
-        }
 
-        // Distance of source vertex from itself is always 0
-        distance[source] = 0;
+        if (weight[n - 1] > W)
+            return buyCarpet(W, weight, value, n - 1);
 
-        // Find the shortest path for all vertices
-        for (int count = 0; count < graph.length - 1; count++) {
-            int min = minDistance(distance, sptSet);
 
-            sptSet[min] = true;
-
-            for (int i = 0; i < graph.length; i++) {
-                if (!sptSet[i] && graph[min][i] != 0
-                        && distance[min] != Integer.MAX_VALUE
-                        && distance[min] + graph[min][i] < distance[i])
-                    distance[i] = distance[min] + graph[min][i];
-            }
-        }
-
-//        printDistance(distance);
+        else return max(value[n - 1] + buyCarpet(W - weight[n - 1], weight, value, n - 1),
+                buyCarpet(W, weight, value, n - 1)
+        );
     }
-    private static int minDistance(int[] distance, Boolean[] sptSet)
-    {
-        int min = Integer.MAX_VALUE, min_index = -1;
-
-        for (int i = 0; i < distance.length; i++) {
-            if (!sptSet[i] && distance[i] <= min) {
-                min = distance[i];
-                min_index = i;
-            }
-        }
-
-        return min_index;
-    }
-
-//    private static void printDistance(int[] distance)
-//    {
-//        System.out.println(
-//                "Vertex \t\t Distance from Source");
-//        for (int i = 0; i < V; i++)
-//            System.out.println(i + " \t\t " + distance[i]);
-//    }
 }

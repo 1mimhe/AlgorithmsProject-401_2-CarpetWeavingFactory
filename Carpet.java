@@ -8,12 +8,18 @@ public class Carpet {
 
     private ArrayList<Vertice> listOfVertices;
 
-    public Carpet(int n) {
+    private double price;
+
+
+    public Carpet(int n, double price) {
         this.numOfVertices = n;
         graph = new LinkedList[n];
         for (int i = 0; i < n; ++i)
             graph[i] = new LinkedList();
         listOfVertices = new ArrayList<>();
+
+        this.price = price;
+
     }
 
     public void addEdge(int value1, int value2) {
@@ -38,5 +44,9 @@ public class Carpet {
 
     public ArrayList<Vertice> getListOfVertices() {
         return listOfVertices;
+    }
+
+    public double getPrice() {
+        return price;
     }
 }
