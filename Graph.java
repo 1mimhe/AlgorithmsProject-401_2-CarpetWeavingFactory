@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 import static java.lang.Math.max;
-import static java.lang.Math.min;
 
 public class Graph {
     public static void designNewCarpet(Carpet newCarpet, int n) {
@@ -14,19 +13,19 @@ public class Graph {
 
         // Assign colors to remaining n-1 vertices
         for (int i = 1; i < n; i++) {
-            for (var list : newCarpet.getGraph()[i]) {
-                if (result[list.value] != -1)
-                    availableForPaint[result[list.value]] = false;
+            for (var v : newCarpet.getGraph()[i]) {
+                if (result[v.value] != -1)
+                    availableForPaint[result[v.value]] = false;
             }
 
             // Find the first availableForPaint color
-            int cr;
-            for (cr = 0; cr < n; cr++) {
-                if (availableForPaint[cr])
+            int color;
+            for (color = 0; color < n; color++) {
+                if (availableForPaint[color])
                     break;
             }
 
-            result[i] = cr; // Assign the found color
+            result[i] = color; // Assign the found color
 
             // Reset the values
             Arrays.fill(availableForPaint, true);
@@ -36,26 +35,26 @@ public class Graph {
             newCarpet.getListOfVertices().get(i).color = result[i];
         }
 
+        printNewDesignedCarpet(result, n);
+        Main.carpets.add(newCarpet);
+    }
+
+    private static void printNewDesignedCarpet(int[] result, int n) {
         System.out.println("Your New Designed Carpet:");
         for (int i = 0; i < n; i++)
             System.out.println("Pattern " + i + " --->  Color "
                     + result[i]);
-        Main.carpets.add(newCarpet);
     }
 
-    public static int buyCarpet(int W, int[] weight, int[] value, int n) {
-
-
+    public static int buyCarpet(int W, int[] weight, int n) {
         if (n == 0 || W == 0)
             return 0;
 
-
         if (weight[n - 1] > W)
-            return buyCarpet(W, weight, value, n - 1);
+            return buyCarpet(W, weight, n - 1);
 
-
-        else return max(value[n - 1] + buyCarpet(W - weight[n - 1], weight, value, n - 1),
-                buyCarpet(W, weight, value, n - 1));
+        else return max(1 + buyCarpet(W - weight[n - 1], weight,  n - 1),
+                buyCarpet(W, weight,  n - 1));
     }
 
     public static void shortestPath(int[][] graph, int source) {
@@ -110,10 +109,10 @@ public class Graph {
             }
         }
 
-        printResult(minDistance_index, minDistance, parents);
+        printShortestPath(minDistance_index, minDistance, parents);
     }
 
-    private static void printResult(int nearestIndex, int minDistance, int[] parents) {
+    private static void printShortestPath(int nearestIndex, int minDistance, int[] parents) {
         System.out.println("The Nearest Store=> " + nearestIndex
                 + "* With " + minDistance + " Distance");
         System.out.print("Path=> ");
