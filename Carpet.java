@@ -15,11 +15,9 @@ public class Carpet {
         this.numOfVertices = n;
         graph = new LinkedList[n];
         for (int i = 0; i < n; ++i)
-            graph[i] = new LinkedList();
+            graph[i] = new LinkedList<>();
         listOfVertices = new ArrayList<>();
-
         this.price = price;
-
     }
 
     public void addEdge(int value1, int value2) {
