@@ -1,19 +1,19 @@
 import java.util.Arrays;
 
 import static java.lang.Math.max;
+import static java.lang.Math.min;
 
 public class Graph {
     public static void designNewCarpet(Carpet newCarpet, int n) {
         int[] result = new int[n];
 
-        result[0]  = 0;
+        result[0] = 0;
 
         boolean[] availableForPaint = new boolean[n];
         Arrays.fill(availableForPaint, true);
 
         // Assign colors to remaining n-1 vertices
-        for (int i = 1; i < n; i++)
-        {
+        for (int i = 1; i < n; i++) {
             for (var list : newCarpet.getGraph()[i]) {
                 if (result[list.value] != -1)
                     availableForPaint[result[list.value]] = false;
@@ -21,7 +21,7 @@ public class Graph {
 
             // Find the first availableForPaint color
             int cr;
-            for (cr = 0; cr < n; cr++){
+            for (cr = 0; cr < n; cr++) {
                 if (availableForPaint[cr])
                     break;
             }
@@ -42,7 +42,8 @@ public class Graph {
                     + result[i]);
         Main.carpets.add(newCarpet);
     }
-    public static int buyCarpet(int W, int[] weight, int[] value , int n) {
+
+    public static int buyCarpet(int W, int[] weight, int[] value, int n) {
 
 
         if (n == 0 || W == 0)
@@ -54,58 +55,75 @@ public class Graph {
 
 
         else return max(value[n - 1] + buyCarpet(W - weight[n - 1], weight, value, n - 1),
-                buyCarpet(W, weight, value, n - 1)
-        );
+                buyCarpet(W, weight, value, n - 1));
     }
 
     public static void shortestPath(int[][] graph, int source) {
-        int[] distance = new int[graph.length];
+        int[] minDistances = new int[graph.length];
 
-        Boolean[] sptSet = new Boolean[graph.length];
+        boolean[] sptSet = new boolean[graph.length];
 
         for (int i = 0; i < graph.length; i++) {
-            distance[i] = Integer.MAX_VALUE; // Infinite
+            minDistances[i] = Integer.MAX_VALUE; //Infinite
             sptSet[i] = false;
         }
 
         // Distance of source vertex from itself is always 0
-        distance[source] = 0;
+        minDistances[source] = 0;
 
-        // Find the shortest path for all vertices
-        for (int count = 0; count < graph.length - 1; count++) {
-            int min = minDistance(distance, sptSet);
+        int[] parents = new int[graph.length];
 
-            sptSet[min] = true;
+        // The starting vertex does not have a parent
+        parents[source] = -1;
 
-            for (int i = 0; i < graph.length; i++) {
-                if (!sptSet[i] && graph[min][i] != 0
-                        && distance[min] != Integer.MAX_VALUE
-                        && distance[min] + graph[min][i] < distance[i])
-                    distance[i] = distance[min] + graph[min][i];
+        for (int i = 1; i < graph.length; i++) {
+            int nearestVertex = -1;
+            int shortestDistance = Integer.MAX_VALUE;
+
+            for (int j = 0; j < graph.length; j++) {
+                if (!sptSet[j] &&
+                        (minDistances[j] < shortestDistance)) {
+                    nearestVertex = j;
+                    shortestDistance = minDistances[j];
+                }
+            }
+
+            sptSet[nearestVertex] = true;
+
+            for (int j = 0; j < graph.length; j++) {
+                int edgeDistance = graph[nearestVertex][j];
+
+                if (edgeDistance > 0 &&
+                        ((shortestDistance + edgeDistance) < minDistances[j])) {
+                    parents[j] = nearestVertex;
+                    minDistances[j] = shortestDistance + edgeDistance;
+                }
             }
         }
 
-//        printDistance(distance);
-    }
-    private static int minDistance(int[] distance, Boolean[] sptSet)
-    {
-        int min = Integer.MAX_VALUE, min_index = -1;
-
-        for (int i = 0; i < distance.length; i++) {
-            if (!sptSet[i] && distance[i] <= min) {
-                min = distance[i];
-                min_index = i;
+        // Find minDistance with index
+        int minDistance = -1, minDistance_index = -1;
+        for (int i = 1; i < minDistances.length; i++) {
+            if (minDistances[i] < minDistance) {
+                minDistance_index = i;
+                minDistance = minDistances[i];
             }
         }
 
-        return min_index;
+        printResult(minDistance_index, minDistance, parents);
     }
 
-//    private static void printDistance(int[] distance)
-//    {
-//        System.out.println(
-//                "Vertex \t\t Distance from Source");
-//        for (int i = 0; i < V; i++)
-//            System.out.println(i + " \t\t " + distance[i]);
-//    }
+    private static void printResult(int nearestIndex, int minDistance, int[] parents) {
+        System.out.println("The Nearest Store=> " + nearestIndex
+                + "* With " + minDistance + " Distance");
+        System.out.print("Path=> ");
+        printPath(nearestIndex, parents);
+        System.out.println();
+    }
+
+    private static void printPath(int currentVertex, int[] parents) {
+        if (currentVertex == -1) return;
+        printPath(parents[currentVertex], parents);
+        System.out.print(currentVertex + "->");
+    }
 }
