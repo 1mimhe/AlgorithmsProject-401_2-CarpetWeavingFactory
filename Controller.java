@@ -122,7 +122,6 @@ public class Controller {
                 + "* With " + minDistance + " Distance");
         System.out.print("Path=> ");
         printPath(nearestIndex, parents);
-        System.out.println();
     }
 
     private static void printPath(int currentVertex, int[] parents) {
