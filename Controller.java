@@ -1,10 +1,12 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import static java.lang.Math.max;
+
 
 public class Controller {
     public static void designNewCarpet(Carpet newCarpet, int numOfPatterns) {
         int[] result = new int[numOfPatterns];
+
+        Arrays.fill(result, -1);
 
         result[0] = 0;
 
@@ -13,9 +15,11 @@ public class Controller {
 
         // Assign colors to remaining numOfPatterns-1 vertices
         for (int i = 1; i < numOfPatterns; i++) {
-            for (var v : newCarpet.getGraph()[i]) {
-                if (result[v.value] != -1)
-                    availableForPaint[result[v.value]] = false;
+
+            for (Vertice vertice : newCarpet.getGraph()[i]) {
+                int v = vertice.value;
+                if (result[v] != -1)
+                    availableForPaint[result[v]] = false;
             }
 
             // Find the first availableForPaint color
@@ -34,7 +38,6 @@ public class Controller {
         for (int i = 0; i < result.length; i++) {
             newCarpet.getListOfVertices().get(i).color = result[i];
         }
-
         Panel.printNewDesignedCarpet(result, newCarpet.getPrice());
         Main.carpets.add(newCarpet);
     }
