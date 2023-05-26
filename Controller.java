@@ -35,16 +35,8 @@ public class Controller {
             newCarpet.getListOfVertices().get(i).color = result[i];
         }
 
-        printNewDesignedCarpet(result, newCarpet.getPrice());
+        Panel.printNewDesignedCarpet(result, newCarpet.getPrice());
         Main.carpets.add(newCarpet);
-    }
-
-    private static void printNewDesignedCarpet(int[] result, double price) {
-        System.out.println("Your New Designed Carpet:");
-        System.out.println("Price=> " + price + "$");
-        for (int i = 0; i < result.length; i++)
-            System.out.println("Pattern " + i + " --->  Color "
-                    + result[i]);
     }
 
     public static ArrayList<Carpet> buyCarpet(double budget) {
@@ -128,19 +120,6 @@ public class Controller {
             }
         }
 
-        printShortestPath(minDistance_index, minDistance, parents);
-    }
-
-    private static void printShortestPath(int nearestIndex, int minDistance, int[] parents) {
-        System.out.println("The Nearest Store=> " + nearestIndex
-                + "* With " + minDistance + " Distance");
-        System.out.print("Path=> ");
-        printPath(nearestIndex, parents);
-    }
-
-    private static void printPath(int currentVertex, int[] parents) {
-        if (currentVertex == -1) return;
-        printPath(parents[currentVertex], parents);
-        System.out.print(currentVertex + "->");
+        Panel.printShortestPath(minDistance_index, minDistance, parents);
     }
 }
