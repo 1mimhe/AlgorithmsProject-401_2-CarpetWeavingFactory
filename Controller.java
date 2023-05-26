@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Arrays;
 import static java.lang.Math.max;
 
@@ -46,15 +47,19 @@ public class Controller {
                     + result[i]);
     }
 
-    public static int buyCarpet(int W, int[] weight, int n) {
-        if (n == 0 || W == 0)
+    public static void buyCarpet(int budget) {
+
+    }
+
+    private static int maxNumOfCarpet(int budget, int[] prices, int n) {
+        if (n == 0 || budget == 0)
             return 0;
 
-        if (weight[n - 1] > W)
-            return buyCarpet(W, weight, n - 1);
+        if (prices[n - 1] > budget)
+            return maxNumOfCarpet(budget, prices, n - 1);
 
-        else return max(1 + buyCarpet(W - weight[n - 1], weight,  n - 1),
-                buyCarpet(W, weight,  n - 1));
+        else return max(1 + maxNumOfCarpet(budget - prices[n - 1], prices,  n - 1),
+                maxNumOfCarpet(budget, prices,  n - 1));
     }
 
     public static void shortestPath(int[][] graph, int source) {
