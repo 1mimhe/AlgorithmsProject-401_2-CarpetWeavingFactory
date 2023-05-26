@@ -32,9 +32,10 @@ public class Main {
                 Panel.listOfCarpets();
                 firstMenu();
             }
-//            case 3 -> {
-//
-//            }
+            case 3 -> {
+                Panel.buyCarpet();
+                firstMenu();
+            }
 //            case 4 -> {
 //
 //            }
