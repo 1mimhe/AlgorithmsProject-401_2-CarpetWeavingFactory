@@ -114,7 +114,7 @@ public class Controller {
                 }
             }
         }
-        System.out.println(Arrays.toString(minDistances));
+
         // Find minDistance with index
         int minDistance = Integer.MAX_VALUE, minDistance_index = -1;
         for (int i = 1; i < minDistances.length; i++) {
@@ -125,5 +125,6 @@ public class Controller {
         }
 
         Panel.printShortestPath(minDistance_index, minDistance, parents);
+        System.out.println("Minimum Distances from Stores=> " + Arrays.toString(minDistances));
     }
 }
