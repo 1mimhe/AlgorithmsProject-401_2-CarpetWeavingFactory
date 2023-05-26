@@ -28,9 +28,10 @@ public class Main {
                 Panel.designPanel();
                 firstMenu();
             }
-//            case 2 -> {
-//
-//            }
+            case 2 -> {
+                Panel.listOfCarpets();
+                firstMenu();
+            }
 //            case 3 -> {
 //
 //            }

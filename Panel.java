@@ -16,12 +16,29 @@ public class Panel {
 
         int i = 1;
         while (true){
-            System.out.print("Relation " + i + "=> ");
+            System.out.print("Relation " + i++ + "=> ");
             String[] k = Main.input.nextLine().split(" ");
             if (k.length == 1) break;
             newCarpet.addEdge(Integer.parseInt(k[0]), Integer.parseInt(k[1]));
         }
 
         Controller.designNewCarpet(newCarpet, numOfPatterns);
+    }
+
+    public static void listOfCarpets() {
+        System.out.println("*List of Carpets*");
+        int i = 1;
+        for (Carpet carpet : Main.carpets) {
+            System.out.println("Carpet #" + i++);
+            System.out.println("Price=> " + carpet.getPrice() + "$");
+
+            int j = 1;
+            for (Vertice pattern : carpet.getListOfVertices()) {
+                    System.out.println("Pattern " + j++ + " --->  Color "
+                            + pattern);
+            }
+        }
+        System.out.print("Enter 0 for Exit=> ");
+        Main.input.nextLine();
     }
 }
