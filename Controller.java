@@ -51,15 +51,22 @@ public class Controller {
 
     }
 
-    private static int maxNumOfCarpet(int budget, int[] prices, int numOfCarpets) {
+    private static int maxNumOfCarpet(double budget, double[] prices, int numOfCarpets, ArrayList<Carpet> result) {
         if (numOfCarpets == 0 || budget == 0)
             return 0;
 
         if (prices[numOfCarpets - 1] > budget)
-            return maxNumOfCarpet(budget, prices, numOfCarpets - 1);
+            return maxNumOfCarpet(budget, prices, numOfCarpets - 1, result);
 
-        else return max(1 + maxNumOfCarpet(budget - prices[numOfCarpets - 1], prices,  numOfCarpets - 1),
-                maxNumOfCarpet(budget, prices,  numOfCarpets - 1));
+        int includeItem = maxNumOfCarpet(budget - prices[numOfCarpets - 1], prices, numOfCarpets - 1, result) + 1;
+        int excludeItem = maxNumOfCarpet(budget, prices, numOfCarpets - 1, result);
+
+        if (includeItem > excludeItem) {
+            result.add(Main.carpets.get(numOfCarpets - 1));
+            return includeItem;
+        } else {
+            return excludeItem;
+        }
     }
 
     public static void shortestPath(int[][] graph, int source) {
