@@ -56,9 +56,22 @@ public class Panel {
 
         System.out.println("\nProcessing...");
         ArrayList<Carpet> result = Controller.buyCarpet(budget);
-        // Print Result
+        printBuyResult(result, budget);
+
         System.out.print("\nEnter 0 for Exit=> ");
         Main.input.nextLine();
+    }
+
+    private static void printBuyResult(ArrayList<Carpet> result, double budget) {
+        System.out.println("*Receipt*\n");
+        double totalPrice = 0;
+        for (int i = 0; i < result.size(); i++) {
+            System.out.println("#Carpet" + (i+1) + ":");
+            printCarpet(result.get(i).getListOfVertices(), result.get(i).getPrice());
+            totalPrice += result.get(i).getPrice();
+        }
+        System.out.println("\nTotal Price=> " + totalPrice + "$");
+        System.out.println("Remaining Budget=> " + (budget - totalPrice) + "$");
     }
 
     public static void shortestPath() {
@@ -85,15 +98,7 @@ public class Panel {
         Main.input.nextLine();
     }
 
-    static void printNewDesignedCarpet(int[] result, double price) {
-        System.out.println("Your New Designed Carpet:");
-        System.out.println("Price=> " + price + "$");
-        for (int i = 0; i < result.length; i++)
-            System.out.println("Pattern " + i + " --->  Color "
-                    + result[i]);
-    }
-
-    static void printShortestPath(int nearestIndex, int minDistance, int[] parents) {
+    public static void printShortestPath(int nearestIndex, int minDistance, int[] parents) {
         System.out.println("The Nearest Store=> " + nearestIndex
                 + "* With " + minDistance + " Distance");
         System.out.print("Path=> ");
@@ -104,5 +109,12 @@ public class Panel {
         if (currentVertex == -1) return;
         printPath(parents[currentVertex], parents);
         System.out.print(currentVertex + "->");
+    }
+
+    public static void printCarpet(ArrayList<Vertice> result, double price) {
+        System.out.println("Price=> " + price + "$");
+        for (int i = 0; i < result.size(); i++)
+            System.out.println("Pattern " + i + " --->  Color "
+                    + result.get(i).color);
     }
 }

@@ -39,7 +39,8 @@ public class Controller {
             newCarpet.getListOfVertices().get(i).color = result[i];
         }
 
-        Panel.printNewDesignedCarpet(result, newCarpet.getPrice());
+        System.out.println("Your New Designed Carpet:");
+        Panel.printCarpet(newCarpet.getListOfVertices(), newCarpet.getPrice());
         Main.carpets.add(newCarpet);
     }
 
