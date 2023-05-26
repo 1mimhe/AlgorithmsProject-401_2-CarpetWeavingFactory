@@ -1,18 +1,17 @@
 import java.util.Arrays;
-
 import static java.lang.Math.max;
 
 public class Graph {
-    public static void designNewCarpet(Carpet newCarpet, int n) {
-        int[] result = new int[n];
+    public static void designNewCarpet(Carpet newCarpet, int numOfPatterns) {
+        int[] result = new int[numOfPatterns];
 
         result[0] = 0;
 
-        boolean[] availableForPaint = new boolean[n];
+        boolean[] availableForPaint = new boolean[numOfPatterns];
         Arrays.fill(availableForPaint, true);
 
-        // Assign colors to remaining n-1 vertices
-        for (int i = 1; i < n; i++) {
+        // Assign colors to remaining numOfPatterns-1 vertices
+        for (int i = 1; i < numOfPatterns; i++) {
             for (var v : newCarpet.getGraph()[i]) {
                 if (result[v.value] != -1)
                     availableForPaint[result[v.value]] = false;
@@ -20,7 +19,7 @@ public class Graph {
 
             // Find the first availableForPaint color
             int color;
-            for (color = 0; color < n; color++) {
+            for (color = 0; color < numOfPatterns; color++) {
                 if (availableForPaint[color])
                     break;
             }
@@ -35,13 +34,14 @@ public class Graph {
             newCarpet.getListOfVertices().get(i).color = result[i];
         }
 
-        printNewDesignedCarpet(result, n);
+        printNewDesignedCarpet(result, newCarpet.getPrice());
         Main.carpets.add(newCarpet);
     }
 
-    private static void printNewDesignedCarpet(int[] result, int n) {
+    private static void printNewDesignedCarpet(int[] result, double price) {
         System.out.println("Your New Designed Carpet:");
-        for (int i = 0; i < n; i++)
+        System.out.println("Price=> " + price + "$");
+        for (int i = 0; i < result.length; i++)
             System.out.println("Pattern " + i + " --->  Color "
                     + result[i]);
     }
