@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5493239b-5e9d-408e-9495-f114bc3b5bdc" name="Changes" comment="Update TestCase" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2QBOziXDDZZwvchVKUjJGYYq7gf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="Panel" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5493239b-5e9d-408e-9495-f114bc3b5bdc" name="Changes" comment="" />
+      <created>1684823772626</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1684823772626</updated>
+      <workItem from="1684823776753" duration="180000" />
+      <workItem from="1684825019964" duration="5685000" />
+      <workItem from="1684870118516" duration="1263000" />
+      <workItem from="1684909855655" duration="3526000" />
+      <workItem from="1684955431769" duration="728000" />
+      <workItem from="1685021630852" duration="1313000" />
+      <workItem from="1685023328142" duration="470000" />
+      <workItem from="1685023923938" duration="4814000" />
+      <workItem from="1685089198258" duration="4846000" />
+      <workItem from="1685094131118" duration="830000" />
+      <workItem from="1685095225376" duration="1124000" />
+      <workItem from="1685106130241" duration="9702000" />
+      <workItem from="1685117850159" duration="2841000" />
+      <workItem from="1685124225232" duration="2198000" />
+    </task>
+    <task id="LOCAL‎−۰۰۰۰۱" summary="Add MainClass">
+      <created>1684823911183</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۱" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۱" />
+      <updated>1684823911183</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۰۲" summary="Add Carpet Class">
+      <created>1684825823575</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۲" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۲" />
+      <updated>1684825823575</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۰۳" summary="Add 'designNewCarpet' method">
+      <created>1684871186361</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۳" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۳" />
+      <updated>1684871186361</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۰۴" summary="Update 'Carpet' Class">
+      <created>1684871202374</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۴" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۴" />
+      <updated>1684871202374</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۰۵" summary="Add 'carpets' List">
+      <created>1684871217323</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۵" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۵" />
+      <updated>1684871217323</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۰۶" summary="Update 'designNewCarpet' method">
+      <created>1684911106555</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۶" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۶" />
+      <updated>1684911106555</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۰۷" summary="Update 'Carpet' Class">
+      <created>1684911124142</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۷" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۷" />
+      <updated>1684911124142</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۰۸" summary="Add 'shortestDistance' method and 2 another private method[minDistance and print]">
+      <created>1685022735261</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۸" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۸" />
+      <updated>1685022735261</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۰۹" summary="Update 'shortestPath' with print methods">
+      <created>1685026110487</created>
+      <option name="number" value="LOCAL‎−۰۰۰۰۹" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۰۹" />
+      <updated>1685026110487</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۱۰" summary="Update 'Graph' Class">
+      <created>1685036221051</created>
+      <option name="number" value="LOCAL‎−۰۰۰۱۰" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۱۰" />
+      <updated>1685036221051</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۱۱" summary="Update 'Carpet' Class">
+      <created>1685036253483</created>
+      <option name="number" value="LOCAL‎−۰۰۰۱۱" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۱۱" />
+      <updated>1685036253483</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۱۲" summary="Add 'Panel' Class">
+      <created>1685036766568</created>
+      <option name="number" value="LOCAL‎−۰۰۰۱۲" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۱۲" />
+      <updated>1685036766568</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۱۳" summary="Update 'Graph' Class">
+      <created>1685089936387</created>
+      <option name="number" value="LOCAL‎−۰۰۰۱۳" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۱۳" />
+      <updated>1685089936387</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۱۴" summary="Update 'Carpet' Class">
+      <created>1685089947261</created>
+      <option name="number" value="LOCAL‎−۰۰۰۱۴" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۱۴" />
+      <updated>1685089947261</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۱۵" summary="Rename 'Graph' Class to 'Controller'">
+      <created>1685091959483</created>
+      <option name="number" value="LOCAL‎−۰۰۰۱۵" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۱۵" />
+      <updated>1685091959483</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۱۶" summary="Add 'firstMenu' method">
+      <created>1685092004489</created>
+      <option name="number" value="LOCAL‎−۰۰۰۱۶" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۱۶" />
+      <updated>1685092004489</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۱۷" summary="Add 'designPanel' method">
+      <created>1685092026181</created>
+      <option name="number" value="LOCAL‎−۰۰۰۱۷" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۱۷" />
+      <updated>1685092026181</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۱۸" summary="Update 'Carpet' Class">
+      <created>1685092048195</created>
+      <option name="number" value="LOCAL‎−۰۰۰۱۸" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۱۸" />
+      <updated>1685092048195</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۱۹" summary="Add 'listOfCarpets' and Update 'firstMenu' method">
+      <created>1685092713640</created>
+      <option name="number" value="LOCAL‎−۰۰۰۱۹" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۱۹" />
+      <updated>1685092713640</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۲۰" summary="Add 'buyCarpet' and Update 'firstMenu' method">
+      <created>1685094570982</created>
+      <option name="number" value="LOCAL‎−۰۰۰۲۰" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۲۰" />
+      <updated>1685094570982</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۲۱" summary="Add 'buyCarpet' and Update 'firstMenu' method">
+      <created>1685094602167</created>
+      <option name="number" value="LOCAL‎−۰۰۰۲۱" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۲۱" />
+      <updated>1685094602167</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۲۲" summary="Update 'Controller' Class">
+      <created>1685094640013</created>
+      <option name="number" value="LOCAL‎−۰۰۰۲۲" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۲۲" />
+      <updated>1685094640013</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۲۳" summary="Add 'shortestPath' Panel and Update 'firstMenu'">
+      <created>1685095370235</created>
+      <option name="number" value="LOCAL‎−۰۰۰۲۳" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۲۳" />
+      <updated>1685095370235</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۲۴" summary="Update 'Panel'">
+      <created>1685095692591</created>
+      <option name="number" value="LOCAL‎−۰۰۰۲۴" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۲۴" />
+      <updated>1685095692591</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۲۵" summary="Update 'Controller'">
+      <created>1685095701969</created>
+      <option name="number" value="LOCAL‎−۰۰۰۲۵" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۲۵" />
+      <updated>1685095701969</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۲۶" summary="Rename 'buyCarpet' method to 'maxNumOfCarpet' and Update">
+      <created>1685096018166</created>
+      <option name="number" value="LOCAL‎−۰۰۰۲۶" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۲۶" />
+      <updated>1685096018166</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۲۷" summary="Update 'firstMenu'">
+      <created>1685110014174</created>
+      <option name="number" value="LOCAL‎−۰۰۰۲۷" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۲۷" />
+      <updated>1685110014174</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۲۸" summary="Update 'Controller' and 'Panel' Class">
+      <created>1685110465392</created>
+      <option name="number" value="LOCAL‎−۰۰۰۲۸" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۲۸" />
+      <updated>1685110465392</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۲۹" summary="Add 'Design' TestCases">
+      <created>1685113925061</created>
+      <option name="number" value="LOCAL‎−۰۰۰۲۹" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۲۹" />
+      <updated>1685113925061</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۳۰" summary="Update 'Design' TestCases">
+      <created>1685116136773</created>
+      <option name="number" value="LOCAL‎−۰۰۰۳۰" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۳۰" />
+      <updated>1685116136773</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۳۱" summary="Add 'printBuyResult' and Update 'Panel' Class">
+      <created>1685117692641</created>
+      <option name="number" value="LOCAL‎−۰۰۰۳۱" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۳۱" />
+      <updated>1685117692641</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۳۲" summary="Update 'Panel' and 'Controller' for 'buy' part">
+      <created>1685119106342</created>
+      <option name="number" value="LOCAL‎−۰۰۰۳۲" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۳۲" />
+      <updated>1685119106342</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۳۳" summary="Khaste Shodiiiiim =(((((">
+      <created>1685119568624</created>
+      <option name="number" value="LOCAL‎−۰۰۰۳۳" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۳۳" />
+      <updated>1685119568624</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۳۴" summary="Add 'AdjacencyGraph' TestCase">
+      <created>1685123284921</created>
+      <option name="number" value="LOCAL‎−۰۰۰۳۴" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۳۴" />
+      <updated>1685123284921</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۳۵" summary="Update 'shortestPath' methods">
+      <created>1685124549167</created>
+      <option name="number" value="LOCAL‎−۰۰۰۳۵" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۳۵" />
+      <updated>1685124549168</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۳۶" summary="Update 'shortestPath' method">
+      <created>1685125752804</created>
+      <option name="number" value="LOCAL‎−۰۰۰۳۶" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۳۶" />
+      <updated>1685125752804</updated>
+    </task>
+    <task id="LOCAL‎−۰۰۰۳۷" summary="Update TestCase">
+      <created>1685125768212</created>
+      <option name="number" value="LOCAL‎−۰۰۰۳۷" />
+      <option name="presentableId" value="LOCAL‎−۰۰۰۳۷" />
+      <updated>1685125768212</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Update 'shortestPath' with print methods" />
+    <MESSAGE value="Add 'Panel' Class" />
+    <MESSAGE value="Update 'Graph' Class" />
+    <MESSAGE value="Rename 'Graph' Class to 'Controller'" />
+    <MESSAGE value="Add 'firstMenu' method" />
+    <MESSAGE value="Add 'designPanel' method" />
+    <MESSAGE value="Update 'Carpet' Class" />
+    <MESSAGE value="Add 'listOfCarpets' and Update 'firstMenu' method" />
+    <MESSAGE value="Add 'buyCarpet' and Update 'firstMenu' method" />
+    <MESSAGE value="Update 'Controller' Class" />
+    <MESSAGE value="Add 'shortestPath' Panel and Update 'firstMenu'" />
+    <MESSAGE value="Update 'Panel'" />
+    <MESSAGE value="Update 'Controller'" />
+    <MESSAGE value="Rename 'buyCarpet' method to 'maxNumOfCarpet' and Update" />
+    <MESSAGE value="Update 'firstMenu'" />
+    <MESSAGE value="Update 'Controller' and 'Panel' Class" />
+    <MESSAGE value="Add 'Design' TestCases" />
+    <MESSAGE value="Update 'Design' TestCases" />
+    <MESSAGE value="Add 'printBuyResult' and Update 'Panel' Class" />
+    <MESSAGE value="Update 'Panel' and 'Controller' for 'buy' part" />
+    <MESSAGE value="Khaste Shodiiiiim =(((((" />
+    <MESSAGE value="Add 'AdjacencyGraph' TestCase" />
+    <MESSAGE value="Update 'shortestPath' methods" />
+    <MESSAGE value="Update 'shortestPath' method" />
+    <MESSAGE value="Update TestCase" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update TestCase" />
+  </component>
+</project>
