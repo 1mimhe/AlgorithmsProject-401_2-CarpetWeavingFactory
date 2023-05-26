@@ -41,4 +41,13 @@ public class Panel {
         System.out.print("Enter 0 for Exit=> ");
         Main.input.nextLine();
     }
+
+    public static void buyCarpet() {
+        System.out.println("*Buy Carpet*");
+        System.out.print("Enter Your Budget=> ");
+        int budget = Main.input.nextInt();
+        Main.input.nextLine();
+
+        Controller.buyCarpet(budget);
+    }
 }
