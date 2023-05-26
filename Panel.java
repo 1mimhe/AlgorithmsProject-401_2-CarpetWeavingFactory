@@ -104,9 +104,10 @@ public class Panel {
 
     public static void printShortestPath(int nearestIndex, int minDistance, int[] parents) {
         System.out.println("The Nearest Store=> " + nearestIndex
-                + "* With " + minDistance + " Distance");
+                + " [With " + minDistance + " Distance]");
         System.out.print("Path=> ");
         printPath(nearestIndex, parents);
+        System.out.println("Done");
     }
 
     private static void printPath(int currentVertex, int[] parents) {

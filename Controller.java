@@ -114,9 +114,9 @@ public class Controller {
                 }
             }
         }
-
+        System.out.println(Arrays.toString(minDistances));
         // Find minDistance with index
-        int minDistance = -1, minDistance_index = -1;
+        int minDistance = Integer.MAX_VALUE, minDistance_index = -1;
         for (int i = 1; i < minDistances.length; i++) {
             if (minDistances[i] < minDistance) {
                 minDistance_index = i;
