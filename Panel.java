@@ -47,7 +47,29 @@ public class Panel {
         System.out.print("Enter Your Budget=> ");
         int budget = Main.input.nextInt();
         Main.input.nextLine();
-
+        System.out.println("Processing...");
         Controller.buyCarpet(budget);
+    }
+
+    public static void shortestPath() {
+        System.out.println("*Nearest Store*");
+        System.out.print("Enter Number of Stores=> ");
+        int numOfStores = Main.input.nextInt();
+        Main.input.nextLine();
+
+        System.out.println("Enter Adjacency Matrix(Graph) of Stores:");
+        int[][] graph = new int[numOfStores][numOfStores];
+        for (int i = 0; i < numOfStores; i++) {
+            for (int j = 0; j < numOfStores; j++) {
+                graph[i][j] = Main.input.nextInt();
+            }
+        }
+
+        System.out.print("Enter Source=> ");
+        int source = Main.input.nextInt();
+        Main.input.nextLine();
+
+        System.out.println("Processing...");
+        Controller.shortestPath(graph, source);
     }
 }

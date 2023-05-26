@@ -33,15 +33,16 @@ public class Main {
                 firstMenu();
             }
             case 3 -> {
+
+            }
+            case 4 -> {
                 Panel.buyCarpet();
                 firstMenu();
             }
-//            case 4 -> {
-//
-//            }
-//            case 5 -> {
-//
-//            }
+            case 5 -> {
+                Panel.shortestPath();
+                firstMenu();
+            }
             default -> System.out.println("Wrong Index!");
         }
     }
