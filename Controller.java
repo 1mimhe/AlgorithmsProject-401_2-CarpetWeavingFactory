@@ -51,15 +51,15 @@ public class Controller {
 
     }
 
-    private static int maxNumOfCarpet(int budget, int[] prices, int n) {
-        if (n == 0 || budget == 0)
+    private static int maxNumOfCarpet(int budget, int[] prices, int numOfCarpets) {
+        if (numOfCarpets == 0 || budget == 0)
             return 0;
 
-        if (prices[n - 1] > budget)
-            return maxNumOfCarpet(budget, prices, n - 1);
+        if (prices[numOfCarpets - 1] > budget)
+            return maxNumOfCarpet(budget, prices, numOfCarpets - 1);
 
-        else return max(1 + maxNumOfCarpet(budget - prices[n - 1], prices,  n - 1),
-                maxNumOfCarpet(budget, prices,  n - 1));
+        else return max(1 + maxNumOfCarpet(budget - prices[numOfCarpets - 1], prices,  numOfCarpets - 1),
+                maxNumOfCarpet(budget, prices,  numOfCarpets - 1));
     }
 
     public static void shortestPath(int[][] graph, int source) {
