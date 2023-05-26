@@ -47,8 +47,15 @@ public class Controller {
                     + result[i]);
     }
 
-    public static void buyCarpet(int budget) {
-
+    public static ArrayList<Carpet> buyCarpet(double budget) {
+        double[] prices = new double[Main.carpets.size()];
+        for (int i = 0; i < prices.length; i++) {
+            prices[i] =
+                    Main.carpets.get(i).getPrice();
+        }
+        ArrayList<Carpet> resultOfCarpets = new ArrayList<>();
+        maxNumOfCarpet(budget, prices, Main.carpets.size(), resultOfCarpets);
+        return resultOfCarpets;
     }
 
     private static int maxNumOfCarpet(double budget, double[] prices, int numOfCarpets, ArrayList<Carpet> result) {
