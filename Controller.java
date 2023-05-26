@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.*;
 
 
 public class Controller {
@@ -44,18 +43,19 @@ public class Controller {
         Main.carpets.add(newCarpet);
     }
 
-    public static ArrayList<Carpet> buyCarpet(double budget) {
+    public static Set<Carpet> buyCarpet(double budget) {
         double[] prices = new double[Main.carpets.size()];
         for (int i = 0; i < prices.length; i++) {
             prices[i] =
                     Main.carpets.get(i).getPrice();
         }
-        ArrayList<Carpet> resultOfCarpets = new ArrayList<>();
+        Set<Carpet> resultOfCarpets = new HashSet<>();
         maxNumOfCarpet(budget, prices, Main.carpets.size(), resultOfCarpets);
+        System.out.println(resultOfCarpets);
         return resultOfCarpets;
     }
 
-    private static int maxNumOfCarpet(double budget, double[] prices, int numOfCarpets, ArrayList<Carpet> result) {
+    private static int maxNumOfCarpet(double budget, double[] prices, int numOfCarpets, Set<Carpet> result) {
         if (numOfCarpets == 0 || budget == 0)
             return 0;
 

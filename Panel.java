@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Set;
 
 public class Panel {
     public static void designPanel() {
@@ -55,21 +56,23 @@ public class Panel {
         Main.input.nextLine();
 
         System.out.println("\nProcessing...");
-        ArrayList<Carpet> result = Controller.buyCarpet(budget);
+        Set<Carpet> result = Controller.buyCarpet(budget);
         printBuyResult(result, budget);
 
         System.out.print("\nEnter 0 for Exit=> ");
         Main.input.nextLine();
     }
 
-    private static void printBuyResult(ArrayList<Carpet> result, double budget) {
+    private static void printBuyResult(Set<Carpet> result, double budget) {
         System.out.println("*Receipt*\n");
         double totalPrice = 0;
-        for (int i = 0; i < result.size(); i++) {
-            System.out.println("#Carpet" + (i+1) + ":");
-            printCarpet(result.get(i).getListOfVertices(), result.get(i).getPrice());
-            totalPrice += result.get(i).getPrice();
+        int i = 1;
+        for (Carpet carpet : result) {
+            System.out.println("#Carpet" + i++ + ":");
+            printCarpet(carpet.getListOfVertices(), carpet.getPrice());
+            totalPrice += carpet.getPrice();
         }
+
         System.out.println("\nTotal Price=> " + totalPrice + "$");
         System.out.println("Remaining Budget=> " + (budget - totalPrice) + "$");
     }
