@@ -9,7 +9,7 @@ public class Main {
     }
 
     public static void firstMenu() {
-        System.out.println("**Carpet-pet-pet System**");
+        System.out.println("**Carpet-pet-pet System**\n");
         System.out.println("Menu:");
         System.out.println("1. Design New Carpet");
         System.out.println("2. List of Carpets");
@@ -18,6 +18,7 @@ public class Main {
         System.out.println("5. Directions to the Nearest Factory Store");
         System.out.println("0. Exit");
 
+        System.out.print("\nEnter Index=> ");
         int n = input.nextInt();
         input.nextLine();
         switch (n) {
