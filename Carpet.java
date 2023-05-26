@@ -2,17 +2,15 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 
 public class Carpet {
-    private int numOfVertices;  //Number of Vertices
     private LinkedList<Vertice> graph[];    //Graph
 
     private ArrayList<Vertice> listOfVertices;
 
     private double price;
 
-    public Carpet(int n, double price) {
-        this.numOfVertices = n;
-        graph = new LinkedList[n];
-        for (int i = 0; i < n; ++i)
+    public Carpet(int numOfVertices, double price) {
+        graph = new LinkedList[numOfVertices];
+        for (int i = 0; i < numOfVertices; ++i)
             graph[i] = new LinkedList<>();
         listOfVertices = new ArrayList<>();
         this.price = price;
