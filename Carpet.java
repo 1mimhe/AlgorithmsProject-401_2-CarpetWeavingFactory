@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Carpet {
@@ -9,7 +8,6 @@ public class Carpet {
     private ArrayList<Vertice> listOfVertices;
 
     private double price;
-
 
     public Carpet(int n, double price) {
         this.numOfVertices = n;
