@@ -22,7 +22,10 @@ public class Panel {
             newCarpet.addEdge(Integer.parseInt(k[0]), Integer.parseInt(k[1]));
         }
 
+        System.out.println("Designing...");
         Controller.designNewCarpet(newCarpet, numOfPatterns);
+        System.out.print("\nEnter 0 for Exit=> ");
+        Main.input.nextLine();
     }
 
     public static void listOfCarpets() {
@@ -38,7 +41,8 @@ public class Panel {
                             + pattern);
             }
         }
-        System.out.print("Enter 0 for Exit=> ");
+
+        System.out.print("\nEnter 0 for Exit=> ");
         Main.input.nextLine();
     }
 
@@ -47,8 +51,11 @@ public class Panel {
         System.out.print("Enter Your Budget=> ");
         int budget = Main.input.nextInt();
         Main.input.nextLine();
+
         System.out.println("Processing...");
         Controller.buyCarpet(budget);
+        System.out.print("\nEnter 0 for Exit=> ");
+        Main.input.nextLine();
     }
 
     public static void shortestPath() {
@@ -71,5 +78,7 @@ public class Panel {
 
         System.out.println("Processing...");
         Controller.shortestPath(graph, source);
+        System.out.print("\nEnter 0 for Exit=> ");
+        Main.input.nextLine();
     }
 }
