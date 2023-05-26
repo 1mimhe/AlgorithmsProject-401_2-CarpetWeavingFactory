@@ -73,6 +73,7 @@ public class Panel {
             totalPrice += carpet.getPrice();
         }
 
+        System.out.println("\nNumber of Bought Carpets=> " + result.size());
         System.out.println("\nTotal Price=> " + totalPrice + "$");
         System.out.println("Remaining Budget=> " + (budget - totalPrice) + "$");
     }

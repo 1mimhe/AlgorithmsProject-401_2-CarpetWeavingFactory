@@ -51,7 +51,6 @@ public class Controller {
         }
         Set<Carpet> resultOfCarpets = new HashSet<>();
         maxNumOfCarpet(budget, prices, Main.carpets.size(), resultOfCarpets);
-        System.out.println(resultOfCarpets);
         return resultOfCarpets;
     }
 
