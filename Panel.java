@@ -40,7 +40,7 @@ public class Panel {
             int j = 1;
             for (Vertice pattern : carpet.getListOfVertices()) {
                     System.out.println("Pattern " + j++ + " --->  Color "
-                            + pattern);
+                            + pattern.color);
             }
         }
 
